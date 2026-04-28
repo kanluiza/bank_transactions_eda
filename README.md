@@ -1,9 +1,11 @@
-🏦 EDA: Банковские транзакции Сбера — можно ли определить возраст клиента по тратам?
-![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
-![Pandas](https://img.shields.io/badge/Pandas-2.x-150458?logo=pandas)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-3.x-orange)
-![Jupyter](https://img.shields.io/badge/Notebook-Jupyter-F37626?logo=jupyter)
-![Dataset](https://img.shields.io/badge/Source-ODS.ai%20Competition-green)
+🏦 EDA: Банковские транзакции Сбера
+Можно ли определить возраст клиента только по его тратам?
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-2.x-130654?style=flat-square&logo=pandas&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-3.x-11557C?style=flat-square&logo=python&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=flat-square&logo=jupyter&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Complete-2ea44f?style=flat-square)
+![Dataset](https://img.shields.io/badge/Dataset-27M_rows-blueviolet?style=flat-square)
 ---
 📌 О проекте
 Исследовательский анализ данных (EDA) на основе реальных банковских транзакций Сбербанка.
@@ -16,11 +18,12 @@
 `train_target.csv`	30 000 клиентов с метками возрастной группы (0–3)
 `small_group_description.csv`	Расшифровка 204 категорий транзакций
 Ключевые поля:
-`client_id` — уникальный номер клиента
-`trans_date` — номер дня в хронологическом порядке (730 дней = 2 года)
-`small_group` — категория транзакции (супермаркеты, аптеки, АЗС и т.д.)
-`amount_rur` — сумма транзакции (анонимизирована без потери структуры)
-`bins` — возрастная группа клиента (0, 1, 2, 3)
+Поле	Описание
+`client_id`	Уникальный номер клиента
+`trans_date`	Номер дня в хронологическом порядке (730 дней = 2 года)
+`small_group`	Категория транзакции (супермаркеты, аптеки, АЗС и т.д.)
+`amount_rur`	Сумма транзакции (анонимизирована без потери структуры)
+`bins`	Возрастная группа клиента (0, 1, 2, 3)
 ---
 🔍 Что исследовалось
 Распределение транзакций по дням недели и дням месяца в разрезе возрастных групп
@@ -58,7 +61,7 @@ Lift-анализ категорий — какие категории аном�
 Python 3.10+
 `pandas` — загрузка и обработка 27M строк
 `numpy` — вычисления
-`matplotlib` / `seaborn` — визуализация (stacked bar, line charts, 2×2 сетки)
+`matplotlib` — визуализация (stacked bar, line charts, 2×2 сетки графиков)
 `pathlib` — работа с файловой системой
 ---
 🚀 Как запустить
@@ -70,18 +73,10 @@ cd bank-transactions-eda
 # 2. Установи зависимости
 pip install -r requirements.txt
 
-# 3. Скачай данные (ссылка из ноутбука)
-# Инструкция в первой ячейке ноутбука
+# 3. Скачай данные по ссылке из первой ячейки ноутбука
 
 # 4. Запусти ноутбук
 jupyter notebook EDA_bank_transactions_analysis.ipynb
-```
-requirements.txt
-```
-pandas>=2.0
-numpy>=1.24
-matplotlib>=3.7
-jupyter>=1.0
 ```
 ---
 📁 Структура репозитория
@@ -99,4 +94,4 @@ bank-transactions-eda/
 > ⚠️ Данные не включены в репозиторий из-за большого размера (~800 MB). Скачать их можно по [ссылке на соревнование](https://ods.ai/competitions/sberbank-sirius-lesson).
 ---
 📬 Контакты
-Кан Луиза — номер телефона: +77751700111 · GitHub · почта: kanluiza23@gmail.com
+Кан Луиза · номер телефона: +77751700111 · почта: kanluiza23@gmail.com
